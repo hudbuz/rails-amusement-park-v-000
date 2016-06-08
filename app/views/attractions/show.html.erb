@@ -9,3 +9,8 @@ How Tall <%= @attraction.min_height %> <br>
 <%= render partial:'/attractions/ride', locals:{attraction: @attraction} %>
 <% end %>
 
+
+<% if current_user.admin %>
+<%= link_to 'Edit Attraction', edit_attraction_path(@attraction) %>
+<% end %>
+

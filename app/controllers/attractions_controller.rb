@@ -11,7 +11,7 @@ class AttractionsController < ApplicationController
   end
 
   def create
-    binding.pry
+
     @attraction = Attraction.new(attraction_params)
     @attraction.save
     redirect_to @attraction
@@ -21,6 +21,17 @@ class AttractionsController < ApplicationController
 
   def show 
     @attraction = Attraction.find(params[:id])
+
+  end
+
+  def edit
+    @attraction = Attraction.find(params[:id])
+  end
+
+
+  def update
+    @attraction = Attraction.find(params[:id])
+    @attraction.update(attraction_params)
 
   end
 
