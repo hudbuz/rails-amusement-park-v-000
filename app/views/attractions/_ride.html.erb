@@ -1,0 +1,4 @@
+<%= form_tag("/users/#{current_user.id}", method: "post") do %>
+<%= hidden_field_tag(:attraction_id, attraction.id) %>
+ <%= submit_tag("Go on this ride") %>
+ <% end %>

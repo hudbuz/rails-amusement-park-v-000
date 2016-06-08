@@ -1,3 +1,9 @@
 class CreateAttractions < ActiveRecord::Migration
- # Write your migrations here
-end
+  create_table :attractions do |t|
+    t.string :name
+    t.integer :tickets
+    t.integer :nausea_rating
+    t.integer :min_height
+    t.integer :happiness_rating
+  end
+  end

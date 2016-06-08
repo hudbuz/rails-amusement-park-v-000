@@ -1,0 +1,6 @@
+<%= attraction.name %>
+<%= attraction.tickets %>
+<%= link_to "Go on #{attraction.name}", attraction_path(attraction) %>
+  <% if current_user.admin %>
+  <%= link_to "Show #{attraction.name}", attraction_path(attraction) %>
+  <% end %>

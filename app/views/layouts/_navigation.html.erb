@@ -1,0 +1,7 @@
+
+<%= link_to 'Sign in', '/signin' %>
+<%= link_to 'Sign up', new_user_path %>
+<%= link_to 'Log Out', sessions_path, method: :delete %>
+<% if @user &&   logged_in %>
+  <%= render partial:'/users/greeting', locals:{user: @user} %>
+  <%end%>

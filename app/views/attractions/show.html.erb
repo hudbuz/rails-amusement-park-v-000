@@ -1,0 +1,11 @@
+Ride
+<%= @attraction.name %><br>
+Tickets: <%= @attraction.tickets %><br>
+How Happy <%= @attraction.happiness_rating %><br>
+How Nausous <%= @attraction.nausea_rating %> <br>
+How Tall <%= @attraction.min_height %> <br>
+
+<% unless current_user.admin %>
+<%= render partial:'/attractions/ride', locals:{attraction: @attraction} %>
+<% end %>
+
